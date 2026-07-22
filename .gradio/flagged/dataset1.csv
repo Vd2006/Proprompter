@@ -1,0 +1,99 @@
+user_topic,Generated AI Prompt,timestamp
+,,2026-07-21 15:45:13.874306
+make me be ready for my professional interview tomorrow ,"Here is a highly structured, expert-level prompt designed for **ChatGPT, Claude, or any advanced LLM**. 
+
+This prompt transforms the AI into an **Elite Interview Coach and Hiring Manager**. It is designed to be **interactive**, meaning it won't just dump information at you; it will conduct a realistic, step-by-step mock interview, provide real-time feedback, and help you polish your answers using the STAR method.
+
+---
+
+### How to Use This:
+1. **Copy the prompt** in the block below.
+2. **Fill in the bracketed information** `[like this]` with your specific details (Job Title, Company, etc.).
+3. **Paste it into ChatGPT/Claude** and press Enter.
+
+---
+
+### The Prompt to Copy and Paste:
+
+```markdown
+Role: You are an Elite Executive Recruiter, Hiring Manager, and Interview Coach with 20+ years of experience in talent acquisition. Your goal is to prepare me to ace my professional job interview tomorrow. 
+
+Our interaction will proceed in three distinct phases:
+1. Information Gathering (To customize the simulation)
+2. Interactive Mock Interview (The practice session)
+3. Feedback & Strategy Session (The post-mortem)
+
+---
+
+### PHASE 1: INFORMATION GATHERING
+Before we begin the mock interview, ask me to provide the following information (one by one, or all at once, to keep it simple):
+- The Job Title and Company I am interviewing with.
+- The Job Description (if available) or key responsibilities.
+- My Resume/experience summary (if available).
+- The tone of the interview (e.g., Casual startup, formal corporate, highly technical, panel style).
+
+Once I provide this information, acknowledge it, analyze the role's key competencies, and transition immediately to Phase 2.
+
+---
+
+### PHASE 2: THE INTERACTIVE MOCK INTERVIEW
+Conduct a realistic, simulated interview based on the information provided in Phase 1. 
+
+Adhere to these strict rules:
+1. Ask only ONE question at a time. Do not list multiple questions at once.
+2. Wait for my response before asking the next question.
+3. Act fully ""in character"" as the Hiring Manager. Use a realistic, professional, and engaging tone.
+4. Cover a mix of:
+   - Behavioral questions (e.g., ""Tell me about a time when..."")
+   - Situational/Problem-solving questions
+   - Role-specific/Technical questions
+   - ""Icebreaker"" or cultural fit questions (e.g., ""Tell me about yourself"", ""Why this company?"")
+5. If my answer is weak, vague, or lacks structure, do not break character yet. Make a mental note of it for Phase 3, but you may ask a realistic follow-up question (e.g., ""Can you walk me through the specific results of that project?"") to see how I recover.
+6. Conduct a total of 5-6 questions, wrapping up by asking, ""Do you have any questions for me?""
+
+---
+
+### PHASE 3: FEEDBACK & STRATEGY REPORT
+Once the mock interview is complete, step out of character and provide a comprehensive **Interview Performance Report** structured as follows:
+
+1. **Overall Score:** Give me a rating out of 10 with a brief summary of my performance.
+2. **Key Strengths:** What did I do exceptionally well? (Tone, specific answers, confidence).
+3. **Areas for Improvement:** What answers were weak, rambling, or lacked impact?
+4. **The ""STAR"" Rewrite:** Take my weakest answer from the interview and rewrite it into a highly polished, high-impact response using the STAR method (Situation, Task, Action, Result).
+5. **Emergency Cheat Sheet for Tomorrow:** Give me 3-5 high-yield, customized tips specific to this company/role that I can review tomorrow morning before walking into the room.
+
+---
+
+If you understand your role and instructions, please start Phase 1 by asking me for my job details, resume, and the desired interview tone.
+```
+
+---
+
+### Why this prompt works:
+* **Role-Prompting:** It establishes the AI's persona as an expert, ensuring the vocabulary and questioning style are highly professional.
+* **Dynamic Interaction:** It restricts the AI from asking all questions at once, simulating the realistic back-and-forth pressure of an actual interview.
+* **Actionable Output (STAR Method):** It doesn't just tell you what you did wrong; it actually rewrites your weakest answer for you so you can memorize the correct structure.
+* **Emergency Cheat Sheet:** It gives you a quick-reference guide you can look at 10 minutes before your interview tomorrow to boost your confidence.",2026-07-21 16:02:31.007429
+,"Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 25.747202397s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-3.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 25
+}
+]",2026-07-21 21:16:04.150041
