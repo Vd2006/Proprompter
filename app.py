@@ -30,7 +30,7 @@ def generate_ai_prompt(message, history):
         full_input = f"{system_instruction}\n\nUser Idea: {message}"
         
         response = client.models.generate_content(
-            model='gemini-3.1-flash-lite',
+            model='gemini-2.0-flash',
             contents=full_input
         )
         
