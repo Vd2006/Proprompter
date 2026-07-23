@@ -7,7 +7,7 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found in .env file! Please check your .env configuration.")
+    raise ValueError("GEMINI_API_KEY not found! Please check your Environment Variables.")
 
 client = genai.Client(api_key=api_key)
 
@@ -30,38 +30,27 @@ def generate_ai_prompt(message, history):
         full_input = f"{system_instruction}\n\nUser Idea: {message}"
         
         response = client.models.generate_content(
-            model='gemini-3.1-flash-lite',
+            model='gemini-2.5-flash',
             contents=full_input
         )
         
         return response.text
     except Exception as e:
         error_message = str(e)
-        print(f"DEBUG - Actual error: {error_message}")
         if "429" in error_message or "quota" in error_message.lower():
             return "⚠️ We've hit today's usage limit. Please try again in a few minutes, or come back later!"
         return "Something went wrong. Please try again shortly."
 
-custom_css = """
-footer {
-    display: none !important;
-}
-button.share-button {
-    display: none !important;
-}
-"""
-
-with gr.Blocks(css=custom_css) as demo:
+with gr.Blocks() as demo:
     gr.Markdown("# 🤖 AI Prompt Engineer")
     gr.Markdown("Enter a simple concept, and this prompt engineer will convert it into a professional, high-quality prompt.")
     
-    # Added copy and retry buttons explicitly to the chatbot configuration
     gr.ChatInterface(
         fn=generate_ai_prompt,
         chatbot=gr.Chatbot(buttons=["copy", "retry"])
     )
     
-    # Custom Footer Section with Clickable Email
+    # Custom Footer Section
     gr.Markdown(
         "<div style='text-align: center; color: gray; margin-top: 20px; font-size: 14px;'>"
         "✨ Created by <b>Vidhi Dwivedi</b> &nbsp;|&nbsp; 📩 Contact me: <a href='mailto:forwork.vidhi@gmail.com' style='color: #00adb5; text-decoration: none;'><b>forwork.vidhi@gmail.com</b></a>"
@@ -69,4 +58,9 @@ with gr.Blocks(css=custom_css) as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    port = int(os.environ.get("PORT", 7860))
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        footer_links=[]
+    )
