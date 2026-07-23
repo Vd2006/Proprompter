@@ -3,6 +3,7 @@ from google import genai
 import gradio as gr
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
@@ -29,6 +30,7 @@ def generate_ai_prompt(message, history):
         
         full_input = f"{system_instruction}\n\nUser Idea: {message}"
         
+        # Valid official model name
         response = client.models.generate_content(
             model='gemini-2.0-flash',
             contents=full_input
@@ -39,7 +41,8 @@ def generate_ai_prompt(message, history):
         error_message = str(e)
         if "429" in error_message or "quota" in error_message.lower():
             return "⚠️ We've hit today's usage limit. Please try again in a few minutes, or come back later!"
-        return "Something went wrong. Please try again shortly."
+        # Return exact error for debugging
+        return f"⚠️ API Error Details: {error_message}"
 
 with gr.Blocks() as demo:
     gr.Markdown("# 🤖 AI Prompt Engineer")
