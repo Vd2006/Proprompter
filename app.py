@@ -32,7 +32,7 @@ def generate_ai_prompt(message, history):
         
         # Valid official model name
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-3.1-flash-lite',
             contents=full_input
         )
         
